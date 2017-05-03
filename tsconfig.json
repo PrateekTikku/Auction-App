@@ -3,6 +3,8 @@
     "target": "ES5",
     "module": "commonjs",
     "experimentalDecorators": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "moduleResolution" : "node",
+    "baseUrl": "."
   }
 }

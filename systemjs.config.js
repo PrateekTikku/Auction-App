@@ -1,14 +1,13 @@
 System.config({
     transpiler: 'typescript',
     typescriptOptions: {emitDecoratorMetadata: true},
+    baseUrl : 'app',
     map: {
       '@angular': 'node_modules/@angular',
-      'rxjs'    : 'node_modules/rxjs',
-      'app'     : 'app'
+      'rxjs'    : 'node_modules/rxjs'
     },
     paths: {
-      'node_modules/@angular/*': 'node_modules/@angular/*/bundles',
-      'app/*' : 'app/*'
+      'node_modules/@angular/*': 'node_modules/@angular/*/bundles'
     },
     meta: {
       '@angular/*': {'format': 'cjs'}

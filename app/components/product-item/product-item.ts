@@ -2,7 +2,7 @@
  * Created by prausa on 5/3/2017.
  */
 import {Component, Input} from '@angular/core';
-import Product from '../../services/product-service';
+import Product from 'app/services/product-service';
 
 @Component({
     selector:'auction-product-item',
