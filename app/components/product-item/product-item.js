@@ -6,17 +6,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * Created by prausa on 5/3/2017.
+ */
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
-        this.name = 'Angular 2';
+var ProductItemComponent = (function () {
+    function ProductItemComponent() {
     }
-    return AppComponent;
+    return ProductItemComponent;
 }());
-AppComponent = __decorate([
+__decorate([
+    core_1.Input()
+], ProductItemComponent.prototype, "product", void 0);
+ProductItemComponent = __decorate([
     core_1.Component({
-        selector: 'app',
-        template: "<h1>Hello {{ name }}!</h1>"
+        selector: 'auction-product-item',
+        templateUrl: 'app/components/product-item/product-item.html',
+        styleUrls: ['app/components/product-item/product-item.css']
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
+], ProductItemComponent);
+exports.default = ProductItemComponent;

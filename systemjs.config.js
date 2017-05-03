@@ -3,10 +3,12 @@ System.config({
     typescriptOptions: {emitDecoratorMetadata: true},
     map: {
       '@angular': 'node_modules/@angular',
-      'rxjs'    : 'node_modules/rxjs'
+      'rxjs'    : 'node_modules/rxjs',
+      'app'     : 'app'
     },
     paths: {
-      'node_modules/@angular/*': 'node_modules/@angular/*/bundles'
+      'node_modules/@angular/*': 'node_modules/@angular/*/bundles',
+      'app/*' : 'app/*'
     },
     meta: {
       '@angular/*': {'format': 'cjs'}
