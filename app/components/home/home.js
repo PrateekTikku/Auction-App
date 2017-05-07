@@ -7,20 +7,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
- * Created by prausa on 5/3/2017.
+ * Created by user-pc on 5/7/2017.
  */
 var core_1 = require("@angular/core");
-var ApplicationComponent = (function () {
-    function ApplicationComponent() {
+var HomeComponent = (function () {
+    function HomeComponent(productService) {
+        this.productService = productService;
+        this.products = [];
+        this.products = this.productService.getProducts();
     }
-    return ApplicationComponent;
+    return HomeComponent;
 }());
-ApplicationComponent = __decorate([
+HomeComponent = __decorate([
     core_1.Component({
-        selector: 'auction-application',
-        templateUrl: 'app/components/application/application.html',
-        styleUrls: ['app/components/application/application.css'],
-        encapsulation: core_1.ViewEncapsulation.None
+        selector: 'auction-home-page',
+        styleUrls: ['app/components/home/home.css'],
+        templateUrl: 'app/components/home/home.html'
     })
-], ApplicationComponent);
-exports.default = ApplicationComponent;
+], HomeComponent);
+exports.default = HomeComponent;

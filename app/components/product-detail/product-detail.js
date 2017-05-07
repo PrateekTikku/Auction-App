@@ -6,21 +6,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * Created by prausa on 5/3/2017.
- */
 var core_1 = require("@angular/core");
-var ApplicationComponent = (function () {
-    function ApplicationComponent() {
+var ProductDetailComponent = (function () {
+    function ProductDetailComponent(route) {
+        this.productTitle = route.snapshot.params['productTitle'];
     }
-    return ApplicationComponent;
+    return ProductDetailComponent;
 }());
-ApplicationComponent = __decorate([
+ProductDetailComponent = __decorate([
     core_1.Component({
-        selector: 'auction-application',
-        templateUrl: 'app/components/application/application.html',
-        styleUrls: ['app/components/application/application.css'],
-        encapsulation: core_1.ViewEncapsulation.None
+        selector: 'product-detail',
+        templateUrl: 'app/components/product-detail/product-detail.html',
+        styleUrls: ['app/components/product-detail/product-detail.css']
     })
-], ApplicationComponent);
-exports.default = ApplicationComponent;
+], ProductDetailComponent);
+exports.default = ProductDetailComponent;
