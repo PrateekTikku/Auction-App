@@ -15,7 +15,7 @@ export default class StarsComponent implements OnInit{
 
     ngOnInit(){
         for(let i=0 ; i<this.count; i++){
-            this.stars.push(i > this.rating);
+            this.stars.push(i > this.rating-1);
         }
     }
 }

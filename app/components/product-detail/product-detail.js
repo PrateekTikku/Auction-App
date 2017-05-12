@@ -8,8 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var ProductDetailComponent = (function () {
-    function ProductDetailComponent(route) {
-        this.productTitle = route.snapshot.params['productTitle'];
+    function ProductDetailComponent(route, productService) {
+        var productId = parseInt(route.snapshot.params['productId']);
+        this.product = productService.getProductById(productId);
+        this.reviews = productService.getReviewsForProduct(productId);
     }
     return ProductDetailComponent;
 }());

@@ -18,7 +18,7 @@ var StarsComponent = (function () {
     }
     StarsComponent.prototype.ngOnInit = function () {
         for (var i = 0; i < this.count; i++) {
-            this.stars.push(i > this.rating);
+            this.stars.push(i > this.rating - 1);
         }
     };
     return StarsComponent;

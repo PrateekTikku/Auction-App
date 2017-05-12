@@ -5,6 +5,7 @@
     "experimentalDecorators": true,
     "noImplicitAny": true,
     "moduleResolution" : "node",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "types": ["es6-shim"]
   }
 }

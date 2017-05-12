@@ -7,5 +7,5 @@ import ProductDetailComponent from "./components/product-detail/product-detail";
 
 export const routes : Routes = [
     {path : '', component : HomeComponent},
-    {path : 'products/:productTitle' , component : ProductDetailComponent}
+    {path : 'products/:productId' , component : ProductDetailComponent}
 ];
