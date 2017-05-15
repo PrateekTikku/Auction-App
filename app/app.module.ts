@@ -10,10 +10,12 @@ import {ProductService} from './services/product-service';
 import {routes} from './routes';
 import ProductDetailComponent from "./components/product-detail/product-detail";
 import {ReactiveFormsModule} from "@angular/forms";
+import {WeatherComponent} from "./components/weather/weather";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
-    imports: [BrowserModule, RouterModule.forRoot(routes), ReactiveFormsModule],
-    declarations: [ApplicationComponent, ProductItemComponent, StarsComponent, HomeComponent, ProductDetailComponent],
+    imports: [BrowserModule, RouterModule.forRoot(routes), ReactiveFormsModule, HttpModule],
+    declarations: [ApplicationComponent, ProductItemComponent, StarsComponent, HomeComponent, ProductDetailComponent, WeatherComponent],
     bootstrap: [ApplicationComponent],
     providers: [ProductService, {
         provide: LocationStrategy, useClass: HashLocationStrategy
