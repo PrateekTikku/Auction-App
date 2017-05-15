@@ -10,9 +10,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Created by prausa on 5/3/2017.
  */
 var core_1 = require("@angular/core");
+var forms_1 = require("@angular/forms");
+require("rxjs/add/operator/debounceTime");
 var ApplicationComponent = (function () {
     function ApplicationComponent() {
+        var _this = this;
+        this.searchInput = new forms_1.FormControl();
+        this.searchInput.valueChanges.debounceTime(500).subscribe(function (value) { return _this.print(value); });
     }
+    ApplicationComponent.prototype.print = function (value) {
+        console.log("The input value is " + value);
+    };
     return ApplicationComponent;
 }());
 ApplicationComponent = __decorate([
