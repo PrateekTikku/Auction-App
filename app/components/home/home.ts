@@ -4,6 +4,7 @@
 import {Component} from '@angular/core';
 import Product from '../../services/product-service';
 import {ProductService} from '../../services/product-service';
+import {FormControl} from "@angular/forms";
 
 @Component({
     selector: 'auction-home-page',
@@ -12,8 +13,12 @@ import {ProductService} from '../../services/product-service';
 })
 export default class HomeComponent {
     products: Product[] = [];
-
+    titleFilter : FormControl = new FormControl();
+    filterCriteria : string;
     constructor(private productService: ProductService) {
         this.products = this.productService.getProducts();
+        this.titleFilter.valueChanges
+            .debounceTime(200)
+            .subscribe(value => {this.filterCriteria = value}, error => console.log(error));
     }
 }

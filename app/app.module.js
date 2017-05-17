@@ -20,6 +20,7 @@ var product_detail_1 = require("./components/product-detail/product-detail");
 var forms_1 = require("@angular/forms");
 var weather_1 = require("./components/weather/weather");
 var http_1 = require("@angular/http");
+var filter_pipe_1 = require("./pipes/filter-pipe");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -28,7 +29,7 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot(routes_1.routes), forms_1.ReactiveFormsModule, http_1.HttpModule],
-        declarations: [application_1.default, product_item_1.default, stars_1.default, home_1.default, product_detail_1.default, weather_1.WeatherComponent],
+        declarations: [application_1.default, product_item_1.default, stars_1.default, home_1.default, product_detail_1.default, weather_1.WeatherComponent, filter_pipe_1.FilterPipe],
         bootstrap: [application_1.default],
         providers: [product_service_1.ProductService, {
                 provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy

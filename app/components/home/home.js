@@ -10,11 +10,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Created by user-pc on 5/7/2017.
  */
 var core_1 = require("@angular/core");
+var forms_1 = require("@angular/forms");
 var HomeComponent = (function () {
     function HomeComponent(productService) {
+        var _this = this;
         this.productService = productService;
         this.products = [];
+        this.titleFilter = new forms_1.FormControl();
         this.products = this.productService.getProducts();
+        this.titleFilter.valueChanges
+            .debounceTime(200)
+            .subscribe(function (value) { _this.filterCriteria = value; }, function (error) { return console.log(error); });
     }
     return HomeComponent;
 }());

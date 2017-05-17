@@ -12,10 +12,11 @@ import ProductDetailComponent from "./components/product-detail/product-detail";
 import {ReactiveFormsModule} from "@angular/forms";
 import {WeatherComponent} from "./components/weather/weather";
 import {HttpModule} from "@angular/http";
+import {FilterPipe} from "./pipes/filter-pipe";
 
 @NgModule({
     imports: [BrowserModule, RouterModule.forRoot(routes), ReactiveFormsModule, HttpModule],
-    declarations: [ApplicationComponent, ProductItemComponent, StarsComponent, HomeComponent, ProductDetailComponent, WeatherComponent],
+    declarations: [ApplicationComponent, ProductItemComponent, StarsComponent, HomeComponent, ProductDetailComponent, WeatherComponent, FilterPipe],
     bootstrap: [ApplicationComponent],
     providers: [ProductService, {
         provide: LocationStrategy, useClass: HashLocationStrategy
