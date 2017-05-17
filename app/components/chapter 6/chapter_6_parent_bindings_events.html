@@ -1,0 +1,11 @@
+<div class="well">
+    <input type="text" #inputHTMLTag (change)="onInputChange(inputHTMLTag.value)">
+</div>
+<div class="row">
+    <div class="col-md-6 bg-primary">
+        <left-child [input]="inputValue" (PriceChanged)="onPriceChanged($event)"></left-child>
+    </div>
+    <div class="col-md-6 bg-success">
+        <right-child [companyStock] = "parentStock"></right-child>
+    </div>
+</div>

@@ -10,7 +10,10 @@ System.config({
       'node_modules/@angular/*': 'node_modules/@angular/*/bundles'
     },
     meta: {
-      '@angular/*': {'format': 'cjs'}
+      '@angular/*': {'format': 'cjs'},
+      'app/components/chapter 6/stockInterface.ts': {
+        format: 'es6'
+      }
     },
     packages: {
         'app'                              : {main: 'main', defaultExtension: 'ts'},

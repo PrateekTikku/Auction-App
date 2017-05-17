@@ -1,0 +1,2 @@
+<!--<h3 class="alert-info"> The price of {{companyName}} has changed to {{companyPrice | currency}}</h3>-->
+<h3 class="alert-info" *ngIf="companyStock"> The price of {{companyStock.company}} has changed to {{companyStock.price | currency}}</h3>

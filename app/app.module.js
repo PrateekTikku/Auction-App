@@ -21,6 +21,21 @@ var forms_1 = require("@angular/forms");
 var weather_1 = require("./components/weather/weather");
 var http_1 = require("@angular/http");
 var filter_pipe_1 = require("./pipes/filter-pipe");
+var left_child_1 = require("./components/chapter 6/left-child");
+var chapter6_1 = require("./components/chapter 6/chapter6");
+var right_child_1 = require("./components/chapter 6/right-child");
+var declarations = [
+    application_1.default,
+    product_item_1.default,
+    stars_1.default,
+    home_1.default,
+    product_detail_1.default,
+    weather_1.WeatherComponent,
+    filter_pipe_1.FilterPipe,
+    chapter6_1.Chapter6ParentComponent,
+    left_child_1.LeftChildComponent,
+    right_child_1.RightChildComponent
+];
 var AppModule = (function () {
     function AppModule() {
     }
@@ -29,7 +44,7 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot(routes_1.routes), forms_1.ReactiveFormsModule, http_1.HttpModule],
-        declarations: [application_1.default, product_item_1.default, stars_1.default, home_1.default, product_detail_1.default, weather_1.WeatherComponent, filter_pipe_1.FilterPipe],
+        declarations: declarations,
         bootstrap: [application_1.default],
         providers: [product_service_1.ProductService, {
                 provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy
